@@ -8,6 +8,9 @@ const CounterView = () => {
     const count = useSelector((state) => state.counter.count);
     const dispatch = useDispatch();
 
+    // Debugging: Log the count value to ensure it's correct
+    console.log('Count:', count);
+
     return (
         <Container
             className='text-center my-4'
@@ -43,15 +46,17 @@ const CounterView = () => {
                                         variant="primary"
                                         onClick={() => dispatch(increment())}
                                         className='mx-2'
+                                        disabled={count === 5}
+
                                     >
                                         Increment
                                     </Button>
                                     <Button
                                         variant="success"
-                                        onClick={() => dispatch(incrementByFive(5))}
+                                        onClick={() => dispatch(incrementByFive(10))}
                                         className='mx-2'
                                     >
-                                        Increment 5
+                                        Increment By 10
                                     </Button>
                                     <Button
                                         variant="danger"

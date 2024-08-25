@@ -1,7 +1,8 @@
 import React from 'react'
-import CounterView from './CounterApp/counter/CounterView'
-import TodosView from './FetchData/TodosView'
-import PostsView from './FetchPosts/postsView'
+import Index from './CurdAPP/Route/Index'
+// import CounterView from './CounterApp/counter/CounterView'
+// import TodosView from './FetchData/TodosView'
+// import PostsView from './FetchPosts/postsView'
 const App = () => {
   return (
     <div>
@@ -9,9 +10,10 @@ const App = () => {
     App Component
 </h1>
 
-      <CounterView/>
+      {/* <CounterView/>
       <TodosView/>
-      <PostsView/>
+      <PostsView/> */}
+      <Index/>
     </div>
   )
 }
